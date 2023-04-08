@@ -12,7 +12,7 @@
     ".item-purchase-btns-container .btn-container button"
   );
   let catalogPageURL =
-    "https://www.roblox.com/catalog?Category=1&CurrencyType=3&pxMin=0&pxMax=0&salesTypeFilter=2&SortType=4";
+    "https://web.roblox.com/catalog?Category=1&CurrencyType=3&pxMin=0&pxMax=0&salesTypeFilter=2&SortType=4";
   let triesIfNotInSale = localStorage.getItem("rlb-tries-if-not-in-sale") || 0;
 
   if (firstItem && !isItemPage()) {
@@ -87,7 +87,7 @@ function timeout(timer) {
 
 function isItemPage() {
   let matchURL = window.location.href.match(
-    /\bhttps?:\/\/www\.roblox\.com\/catalog\/\d+?\b/g
+    /\bhttps?:\/\/web\.roblox\.com\/catalog\/\d+?\b/g
   );
 
   if (matchURL && matchURL[0]) {
